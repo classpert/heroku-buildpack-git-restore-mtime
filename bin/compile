@@ -4,15 +4,15 @@ set -e # fail fast
 
 BUILD_DIR=$1
 ENV_DIR=$3
-GIT_URL=`cat $ENV_DIR/GIT_URL`
+# GIT_URL=`cat $ENV_DIR/GIT_URL`
 
 echo "=====> Restoring mtime from git history"
 ls -la $ENV_DIR
 env
 export PATH=$BUILD_DIR/.apt/usr/lib/git-core:$PATH
-mkdir -p $BUILD_DIR/new
-cd $BUILD_DIR/new
-git clone $GIT_URL
+# mkdir -p $BUILD_DIR/new
+# cd $BUILD_DIR/new
+# git clone $GIT_URL
 cd $BUILD_DIR
 git restore-mtime
 echo " ✓"
