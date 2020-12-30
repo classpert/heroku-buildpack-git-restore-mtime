@@ -6,7 +6,7 @@ BUILD_DIR=$1
 
 echo "=====> Restoring mtime from git history"
 echo $PATH
-ls -la $BUILD_DIR/.apt/usr/bin
+ls -la $BUILD_DIR/.apt
 cd $BUILD_DIR
 git restore-mtime
 echo " ✓"
