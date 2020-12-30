@@ -7,6 +7,8 @@ ENV_DIR=$3
 GIT_URL=`cat $ENV_DIR/GIT_URL`
 
 echo "=====> Restoring mtime from git history"
+ls -la $ENV_DIR
+env
 export PATH=$BUILD_DIR/.apt/usr/lib/git-core:$PATH
 mkdir -p $BUILD_DIR/new
 cd $BUILD_DIR/new
